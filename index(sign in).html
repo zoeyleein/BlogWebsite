@@ -1,0 +1,42 @@
+<!-- 
+    Student: JingYi Li, Wei Deng
+    File Name: index(sign up).html
+    Date of creating: Nov 17 2023
+    Description: This is the home page of a blogging website with sign up page
+-->
+
+<!DOCTYPE html>
+<html lang="en">  
+<head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="JingYi Li, Wei Deng" />
+    <meta name="description" content="Assignment 2" />
+    <title>Bloggin Website</title>
+    <link rel="stylesheet" href="bloggingstyle.css">
+</head>
+<body class="home">
+    <header>
+
+    </header>
+
+    <!--Introduction-->
+    <h1>Welcome Blogging Website</h1>
+    <p>Sign in or sign up to get started! </p>
+
+    <!--Sign in form-->
+    <form action="blogging.php" method="post"> <!--onsubmit="return signIpValidate();-->
+        <div class="textfield">
+            <label for="username">User Name</label>
+            <input type="text" name="username" id="username" placeholder="User name">
+        </div>
+
+        <div class="textfield">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" placeholder="Password">
+        </div>
+
+        <button id="signIp" type="submit">Login</button>
+    </form>
+
+    <a href="index(sign up).html" id="signUp" class="button-link">Sign up</a>
+</body>
