@@ -8,22 +8,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="author" content="JingYi Li, Wei Deng" />
-    <meta name="description" content="Assignment 2" />
-    <title>Blogging Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bloggingstyle.css">
+    <script src="js/bloggingscript.js"></script>
+    <title>Blogging Website</title>
 </head>
 <body class="home">
-    <header>
-        
-    </header>
-
     <!-- Introduction -->
     <h1>Welcome to the Blogging Website</h1>
     <p>Sign in or sign up to get started!</p>
 
     <!-- Sign up form -->
-    <form action="blogging.php" method="post"> <!--onsubmit="return signIpValidate();-->
+    <form action="index(sign up).html" method="post" onsubmit="return signUpValidate();">
         <div class="textfield">
             <label for="username">User Name</label>
             <input type="text" name="username" id="username" placeholder="User name">
