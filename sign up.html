@@ -1,6 +1,6 @@
 <!-- 
     Student: JingYi Li, Wei Deng
-    File Name: index(sign up).html
+    File Name: sign up.html
     Date of creating: Nov 17 2023
     Description: This is the home page of a blogging website with sign up page
 -->
@@ -9,7 +9,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="bloggingstyle.css">
+    <link rel="stylesheet" href="blogstyle.css">
     <script src="js/bloggingscript.js"></script>
     <title>Blogging Website</title>
 </head>
@@ -19,10 +19,10 @@
     <p>Sign in or sign up to get started!</p>
 
     <!-- Sign up form -->
-    <form action="index(sign up).html" method="post" onsubmit="return signUpValidate();">
+    <form action="sign up.html" method="post" onsubmit="return signUpValidate();">
         <div class="textfield">
-            <label for="username">User Name</label>
-            <input type="text" name="username" id="username" placeholder="User name">
+            <label for="authorname">User Name</label>
+            <input type="text" name="authorname" id="authorname" placeholder="User name">
         </div>
 
         <div class="textfield">
@@ -38,6 +38,6 @@
         <button id="signUp" type="submit">Sign up</button>
     </form>
 
-    <a href="index(sign in).html" id="signIn" class="button-link">Sign in</a>
+    <a href="sign in.html" id="signIn" class="button-link">Sign in</a>
 </body>
 </html>

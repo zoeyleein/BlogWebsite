@@ -1,6 +1,6 @@
 <!-- 
     Student: JingYi Li, Wei Deng
-    File Name: index(sign up).html
+    File Name: sign up.html
     Date of creating: Nov 17 2023
     Description: This is the home page of a blogging website with sign up page
 -->
@@ -8,11 +8,10 @@
 <html lang="en">  
 <head>
     <meta charset="UTF-8" />
-    <meta name="author" content="JingYi Li, Wei Deng" />
-    <meta name="description" content="Assignment 2" />
-    <title>Bloggin Website</title>
-    <link rel="stylesheet" href="bloggingstyle.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="blogstyle.css">
     <script src="js/bloggingscript.js"></script>
+    <title>Blogging Website</title>
 </head>
 <body class="home">
     <header>
@@ -24,7 +23,7 @@
     <p>Sign in or sign up to get started! </p>
 
     <!--Sign in form-->
-    <form action="blogging.php" method="post"> <!--onsubmit="return signIpValidate();-->
+    <form action="index.php" method="post" onsubmit="return signIpValidate();">
         <div class="textfield">
             <label for="username">User Name</label>
             <input type="text" name="username" id="username" placeholder="User name">
@@ -38,5 +37,5 @@
         <button id="signIp" type="submit">Login</button>
     </form>
 
-    <a href="index(sign up).html" id="signUp" class="button-link">Sign up</a>
+    <a href="sign up.html" id="signUp" class="button-link">Sign up</a>
 </body>
