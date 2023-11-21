@@ -10,32 +10,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="blogstyle.css">
-    <script src="js/bloggingscript.js"></script>
+    <script src="js/singinvalidation.js"></script>
     <title>Blogging Website</title>
 </head>
-<body class="home">
+<body class="login">
     <header>
-
+        <h1>Sign in</h1>
     </header>
 
-    <!--Introduction-->
-    <h1>Welcome Blogging Website</h1>
-    <p>Sign in or sign up to get started! </p>
-
     <!--Sign in form-->
-    <form action="index.php" method="post" onsubmit="return signIpValidate();">
+    <form action="index.php" method="post" onsubmit="return signInValidate();">
         <div class="textfield">
             <label for="username">User Name</label>
             <input type="text" name="username" id="username" placeholder="User name">
         </div>
-
+    
         <div class="textfield">
             <label for="password">Password</label>
             <input type="password" name="password" id="password" placeholder="Password">
         </div>
-
-        <button id="signIp" type="submit">Login</button>
+    
+        <button id="signIn" type="submit">Login</button>
+        <button id="signUp" onclick="window.location.href='sign up.html'" type="button" class="button-link">Sign up</button>
     </form>
-
-    <a href="sign up.html" id="signUp" class="button-link">Sign up</a>
+    
+    <script>
+        function redirectToIndex() {
+            window.location.href = 'index.php';
+        }
+    </script>
 </body>

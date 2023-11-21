@@ -13,13 +13,13 @@
     <script src="js/bloggingscript.js"></script>
     <title>Blogging Website</title>
 </head>
-<body class="home">
-    <!-- Introduction -->
-    <h1>Welcome to the Blogging Website</h1>
-    <p>Sign in or sign up to get started!</p>
+<body class="login">
+    <header>
+        <h1>Sign up</h1>
+    </header>
 
     <!-- Sign up form -->
-    <form action="sign up.html" method="post" onsubmit="return signUpValidate();">
+    <form action="signup_process.php" method="post" onsubmit="return signUpValidate();">
         <div class="textfield">
             <label for="authorname">User Name</label>
             <input type="text" name="authorname" id="authorname" placeholder="User name">
@@ -36,8 +36,8 @@
         </div>
 
         <button id="signUp" type="submit">Sign up</button>
+        <button id="signIn" onclick="window.location.href='sign in.html'" type="button" class="button-link">Sign in</button>
     </form>
 
-    <a href="sign in.html" id="signIn" class="button-link">Sign in</a>
 </body>
 </html>

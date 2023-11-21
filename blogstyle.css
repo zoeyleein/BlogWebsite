@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Varta:wght@400;700&display=swap');
 
-html {
+/* html {
   height: 100%;
   width: 100%;
 }
@@ -11,6 +11,15 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Varta', sans-serif;
+} */
+
+.login {
+    background-color: #FFF9D7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Varta', sans-serif;
 }
 
 header {
@@ -18,14 +27,14 @@ header {
   height: 80px;
   margin: 0 0 30px 0;
   padding-top: 30px;
-  background: #FFF9D7;
+  background: #35dde9;
   color: black;
 }
 
 header h1 {
   margin: 0;
   padding: 0 20px;
-  font-size: 40px;
+  font-size: 100px;
   font-family: 'Varta', sans-serif;
   text-align: center;
 }
@@ -62,7 +71,7 @@ footer {
   height: 20px;
   margin: 0 0 10px 0;
   padding: 10px 20px;
-  background: #0055DD;
+  background: #d92390;
   color: white;
 }
 

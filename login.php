@@ -13,7 +13,7 @@ if ($conn->connect_error) {
 }
 
 // Get the author name and password submitted by the user
-$author = $_POST['author'];
+$author = $_POST['username']; // Assuming your form field is 'username', not 'authorname'
 $password = $_POST['password'];
 
 // Prevent SQL injection attacks
@@ -31,7 +31,9 @@ if ($result->num_rows > 0) {
     $_SESSION['user_id'] = $row['id'];
     $_SESSION['author'] = $row['author'];
 
-    echo "Login successful!";
+    // Redirect to the index page
+    header("Location: index.php");
+    exit(); // Make sure to exit after sending the header
 } else {
     // User authentication failed, display error message or perform other actions
     echo "Login failed. Please check the author name and password.";

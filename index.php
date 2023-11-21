@@ -10,12 +10,12 @@
 
 <?php
 // Check if the user is already logged in
-//session_start();
-//if (!isset($_SESSION['user_id'])) {
-  // If not logged in, show the login form
-  //include("login_form.php"); // Create a separate file for the login form
-  //exit();
-//}
+// session_start();
+// if (!isset($_SESSION['user_id'])) {
+//   If not logged in, show the login form
+//   include("login_form.php"); // Create a separate file for the login form
+//   exit();
+// }
 
 include ("headerEm.php");
 
