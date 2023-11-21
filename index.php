@@ -1,8 +1,13 @@
-
+<!-- 
+    Student: JingYi Li, Wei Deng
+    File Name: index.php
+    Date of creating: Nov 17 2023
+    Description: This is for user to add/edit/delete their posts.
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" media="all" href="blogstyle.css" />
+  <link rel="stylesheet" href="blogstyle.css" />
   <title>PHP_DB</title>
 </head>
 <body>
@@ -47,6 +52,7 @@ $db = db_connect();
   	  <tr>
         <th>ID</th>
         <th>Author</th>
+        <th>Topic</th>
         <th>Category</th>
   	    <th>Content</th>
   	    <th>&nbsp</th>
@@ -59,6 +65,7 @@ $db = db_connect();
         <tr>
           <td><?php echo $results['id']; ?></td>
           <td><?php echo $results['author']; ?></td>
+          <td><?php echo $results['title']; ?></td>
           <td><?php echo $results['category'] ; ?></td>
     	    <td><?php echo $results['content']; ?></td>
           <td><a class="action" href="<?php echo"show.php?id=" . $results['id']; ?>">Display</a></td>

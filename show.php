@@ -24,30 +24,29 @@ $result = mysqli_fetch_assoc($result_set);
 ?>
 
 <div id="content">
-
-<a class="back-link"  href="index.php"> Back to List</a>
-
+<div class="actions">
+  <a class="back-link"  href="index.php"> Back to List</a>
+</div>
   <div class="page show">
 
-  <h1> <?php echo $result['author']; ?></h1>
+  <h1> <?php //echo $result['author']; ?></h1>
 
 <div class="attributes">
+  <dl>  
+    <dt>Topic</dt>
+    <dd><?php echo $result['title']; ?></dd>
+  </dl>
   <dl>
     <dt>Author</dt>
     <dd><?php echo $result['author']; ?></dd>
   </dl>
-      <dl>
-        <dt>Category</dt>
-        <dd><?php echo $result['category']; ?></dd>
-      </dl>
-      <dl>
-        <dt>Content</dt>
-        <dd><?php echo $result['content']; ?></dd>
-      </dl>
-      <dl>
-        
-    </div>
-
+  <dl>
+    <dt>Category</dt>
+    <dd><?php echo $result['category']; ?></dd>
+  </dl>
+  </dl>
+</div>
+  <P><?php echo $result['content']; ?></P>
 
   </div>
 

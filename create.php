@@ -7,11 +7,12 @@ $db = db_connect();
 
   // Handle form values sent by new.php
   if($_SERVER['REQUEST_METHOD'] == 'POST'){
+ $title = $_POST['title'] ;
  $author = $_POST['author'] ;
  $category = $_POST['category'] ;
  $content = $_POST['content'];
 
-  $sql = "INSERT INTO shortblogs (author, category, content) VALUES ('$author','$category','$content')";
+  $sql = "INSERT INTO shortblogs (title, author, category, content) VALUES ('$title','$author','$category','$content')";
 $result = mysqli_query($db, $sql);
     // For INSERT statements, $result is true/false
     

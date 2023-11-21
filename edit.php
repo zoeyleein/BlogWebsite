@@ -15,10 +15,11 @@ $page_title = 'Edit Blog';
   
   //access the employee information
   $author = $_POST['author']; 
+  $title = $_POST['title']; 
   $category= $_POST['category'] ;
   $content= $_POST['content'] ;
   //update the table with new information
-  $sql="UPDATE shortblogs set author = '$author' , category= '$category' , content= '$content' where id = '$id' ";
+  $sql="UPDATE shortblogs set author = '$author' , title = '$title' , category= '$category' , content= '$content' where id = '$id' ";
   $result = mysqli_query($db, $sql);
   //redirect to show page
     header("Location: show.php?id=  $id");
@@ -34,21 +35,25 @@ $result = mysqli_fetch_assoc($result_set);
 
 ?>
 
-<?php include 'headerEm.php' ?>;
+<?php include 'headerEm.php' ?>
 
 <div id="content">
-
-  <a class="back-link" href="index.php"> Back to List</a>
-
+  <div class="actions">
+    <a class="back-link" href="index.php"> Back to List</a>
+  </div>
   <div class="page edit">
     <h1>Edit Blog
     </h1>
     <!-- form will post to the same page -->
     <form form action="<?php echo 'edit.php?id=' . $result['id']; ?>"  method="post">
-      <dl>
+      <!-- <dl>
         <dt> ID</dt>
         <dd><input type="text" name="id" value="<?php echo $result['id']; ?>" /></dd>
         </dd>
+      </dl> -->
+      <dl>
+        <dt>Topic</dt>
+        <dd><input class="input" type="text" name="title" value="<?php echo $result['title']; ?>"  /></dd>
       </dl>
       <dl>
         <dt>Author</dt>
@@ -57,13 +62,11 @@ $result = mysqli_fetch_assoc($result_set);
       <dl>
         <dt>Category</dt>
         <dd><input type="text" name="category" value="<?php echo $result['category']; ?>" /></dd>
-
         </dd>
       </dl>
       <dl>
         <dt>Content</dt>
-        
-        <dd><input type="text" name="content" value="<?php echo $result['content']; ?>" /></dd>
+        <dd><textarea class="input" name="content" rows="10" style="width: 350px;" required><?php echo $result['content']; ?></textarea></dd>
 
         </dd>
       </dl>
