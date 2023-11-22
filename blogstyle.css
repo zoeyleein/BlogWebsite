@@ -165,14 +165,18 @@ table.list {
 }
 
 table.list tr td {
-  border: 1px solid #999999;
+  border: 0.5px solid #1a1a1a;
 }
 
 table.list tr th {
-  border: 1px solid #FEFAEF;
+  border: 0.5px solid #1a1a1a;
   background: #FC5B3F;
   color: white;
-  text-align: left;
+  padding: 5px 5px;
+}
+
+div.page.show {
+  margin-top: 50px;
 }
 
 /* Add a class for the action links */

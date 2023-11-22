@@ -14,13 +14,6 @@
   
 
 <?php
-// Check if the user is already logged in
-// session_start();
-// if (!isset($_SESSION['user_id'])) {
-//   If not logged in, show the login form
-//   include("login_form.php"); // Create a separate file for the login form
-//   exit();
-// }
 
 include ("headerEm.php");
 
@@ -45,7 +38,7 @@ $db = db_connect();
     <h1>Short Blogs</h1>
 
     <div class="actions">
-      <a class="action" href="new.php">Add a new post</a>
+      <a class="action" href="new.php">Add a post</a>
       <label for="filtercategory">Category : </label>
       <select name="filtercategory">
         <option value="Food">Food</option>
@@ -62,9 +55,7 @@ $db = db_connect();
         <th style="text-align: center;">Title</th>
         <th style="text-align: center;">Category</th>
   	    <th style="text-align: center;">Content</th>
-  	    <th style="text-align: center;">&nbsp</th>
-  	    <th style="text-align: center;">&nbsp</th>
-        <th style="text-align: center;">&nbsp</th>
+  	    <th colspan="3" style="text-align: center;">&nbsp;</th>
   	  </tr>
 
       <?php while($results = mysqli_fetch_assoc($result_set)) { ?> 
@@ -75,9 +66,11 @@ $db = db_connect();
           <td style="width: 90px; padding: 10px;"><?php echo $results['title']; ?></td>
           <td style="width: 100px; text-align: center;"><?php echo $results['category'] ; ?></td>
     	    <td style="width: 400px; padding: 10px;"><?php echo $results['content']; ?></td>
-          <td style="text-align: center;"><a class="action action-display" href="<?php echo "show.php?id=" . $results['id']; ?>">Display</a></td>
-          <td style="text-align: center;"><a class="action action-edit" href="<?php echo "edit.php?id=" . $results['id']; ?>">Edit</a></td>
-          <td style="text-align: center;"><a class="action action-remove" href="<?php echo "delete.php?id=" . $results['id']; ?>">Remove</a></td> 
+          <td colspan="3" style="text-align: center;">
+            <a class="action action-display" href="<?php echo "show.php?id=" . $results['id']; ?>">Display</a>
+            <a class="action action-edit" href="<?php echo "edit.php?id=" . $results['id']; ?>">Edit</a>
+            <a class="action action-remove" href="<?php echo "delete.php?id=" . $results['id']; ?>">Remove</a>
+          </td>
     	  </tr>
       <?php } ?>
   	</table>
