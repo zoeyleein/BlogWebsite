@@ -52,7 +52,7 @@ $result = mysqli_fetch_assoc($result_set);
         </dd>
       </dl> -->
       <dl>
-        <dt>Topic</dt>
+        <dt>Title</dt>
         <dd><input class="input" type="text" name="title" value="<?php echo $result['title']; ?>"  /></dd>
       </dl>
       <dl>
@@ -77,7 +77,5 @@ $result = mysqli_fetch_assoc($result_set);
     </form>
 
   </div>
-
+  <?php include 'footerEm.php'; ?>
 </div>
-
-<?php include 'footerEm.php'; ?>

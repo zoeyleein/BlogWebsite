@@ -1,0 +1,51 @@
+<!-- 
+    Student: JingYi Li, Wei Deng
+    File Name: signin.html
+    Date of creating: Nov 17 2023
+    Description: This is for user to sign in.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="blogstyle.css">
+    <script src="/A02 Blogging website/signin.js"></script>
+    <title>Blog Sign in</title>
+</head>
+<body class="login">
+    <header>
+        <h1>Sign in</h1>
+    </header>
+
+    <!-- Sign in form -->
+    <div>
+        <form action="index.php" method="post" onsubmit="return validate();">
+            <div class="textfield">
+                <label for="authorname">User Name</label>
+                <input type="text" name="authorname" id="authorname" placeholder="User name">
+            </div>  
+
+            <div class="textfield">
+                <label for="pass">Password</label>
+                <input type="password" name="pass" id="pass" placeholder="Password">
+            </div>
+
+            <button class="button" type="submit">Login</button>
+            <!-- Display error message if there's an error -->
+            <?php if (!empty($error)): ?>
+                <div class="error-message"><?php echo $error; ?></div>
+            <?php endif; ?>
+
+            <button class="button" onclick="window.location.href='signup.html'" type="button" class="button-link">Sign up</button>
+
+        </form>
+        <script>
+            function redirectToIndex() {
+                window.location.href = 'index.php';
+            }
+        </script>
+    </div>
+    
+</body>
+</html>

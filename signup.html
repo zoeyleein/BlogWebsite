@@ -1,0 +1,52 @@
+<!-- 
+    Student: JingYi Li, Wei Deng
+    File Name: signin.html
+    Date of creating: Nov 17 2023
+    Description: This is for user to sign up.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="blogstyle.css">
+    <script src="/A02 Blogging website/signup.js"></script>
+    <link rel="stylesheet" href="weeklykitten.css">
+    <title>Blog Sign Up</title>
+</head>
+<body class="login">
+    <header>
+        <h1>Sign up</h1>
+    </header>
+    <div>
+        <form action="signup_process.php" method="post" onsubmit="return validate();">
+            <!-- the validate function for this form -->
+
+            <div class="textfield">
+                <label for="authorname">User Name</label>
+                <input type="text" name="authorname" id="authorname" placeholder="User name">
+            </div>
+
+            <div class="textfield">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" placeholder="Email">
+            </div>
+
+            <div class="textfield">
+                <label for="pass">Password</label>
+                <input type="password" name="pass" id="pass" placeholder="Password">
+            </div>
+        
+            <div class="textfield">
+                <label for="pass2">Re-type Password</label>
+                <input type="password" id="pass2" placeholder="Password">
+            </div>
+
+            <button id="signUp" class="button" type="submit">Submit</button>
+            <button class="button" onclick="window.location.href='signin.html'" type="button" class="button-link">Sign in</button>
+
+        </form>
+    </div>
+
+</body>
+</html>

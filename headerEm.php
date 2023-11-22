@@ -17,7 +17,7 @@
       <ul>
         <li><a href="<?php echo 'searching.php'; ?>">Searching</a></li>
         <li><a href="<?php echo 'index.php'; ?>">User</a></li>
-        <li><a href="sign in.html">Log out</a></li>
-        <li><a href="sign up.html">Sing up</a></li>
+        <li><a href="signin.html">Log out</a></li>
+        <li><a href="signup.html">Sing up</a></li>
       </ul>
     </navigation>

@@ -16,7 +16,7 @@
 
     <form action='create.php' method="POST">
       <dl>
-        <dt>Topic</dt>
+        <dt>Title</dt>
         <dd><input class="input" type="text" name="title"  /></dd>
       </dl>  
       <dl>
@@ -29,7 +29,7 @@
       </dl>
       <dl>
         <dt>Content</dt>
-        <dd><textarea class="input" name="message" rows="10" style="width: 350px;" required></textarea></dd>
+        <dd><textarea class="input" name="content" rows="10" style="width: 350px;" required></textarea></dd>
         </dd>
       </dl>
       <div id="operations">
@@ -37,11 +37,7 @@
       </div>
     </form>
 
-
-
-
   </div>
+  <?php include 'footerEm.php'; ?>
 
 </div>
-
-<?php include 'footerEm.php'; ?>

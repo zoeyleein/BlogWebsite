@@ -30,22 +30,28 @@ body {
 
 .textfield {
   font-size: 20px;
+  margin-bottom: 10px;
 }
 
 .textfield > input {
   display: block;
   width: 100%;
   margin: 10px 0;
-  margin-bottom: 30px;
+  margin-bottom: 5px;
   padding: 7px;
   border: 1px solid #ccc; 
   border-radius: 4px;
+}
+
+.error-message {
+  font-size: 15px;
 }
 
 .button {
   color: white;
   font-size: 15px;
   border-radius: 10px;
+  margin-top: 20px;
   margin-right: 15px;
   padding: 5px 15px;
   background-color: #FC5B3F;
@@ -122,13 +128,22 @@ navigation ul li a:hover {
   padding: 0 30px;
 }
 
-footer {
+/* footer {
   display: flex;
   width: 100%; 
   height: 30px;
   margin: 0 auto;
   color: black;
   text-align: center;
+} */
+
+footer {
+  width: 100%;
+  height: 30px;
+  margin-top: 80px; /* Push the footer to the bottom */
+  padding-bottom: 30px;
+  color: rgb(170, 170, 170);
+  text-align: left;
 }
 
 /* Actions */
@@ -158,6 +173,34 @@ table.list tr th {
   background: #FC5B3F;
   color: white;
   text-align: left;
+}
+
+/* Add a class for the action links */
+.action {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #fff; /* Text color */
+}
+
+/* Define different background colors for different actions */
+.action-display {
+  margin: 5px 5px;
+  padding: 5px 5px;
+  background-color: #4CAF50; /* Green */
+}
+
+.action-edit {
+  margin: 5px 5px;
+  padding: 5px 5px;
+  background-color: #008CBA; /* Blue */
+}
+
+.action-remove {
+  margin: 5px 5px;
+  padding: 5px 5px;
+  background-color: #FF0000; /* Red */
 }
 
 /* Forms */
@@ -199,7 +242,7 @@ dd {
 
 /* Errors */
 
-.errors {
+/* .errors {
   display: inline-block;
   border: 2px solid red;
   color: red;
@@ -210,6 +253,15 @@ dd {
 .errors ul {
   margin-bottom: 0;
   padding-left: 1em;
+} */
+
+.error-message {
+  display: inline;
+  color: red;
+}
+
+.textfield.error > input {
+  border: 1px solid red; /* Add this line to set the border color to red for error state */
 }
 
 /* Responsive */

@@ -1,3 +1,9 @@
+<!-- 
+    Student: JingYi Li, Wei Deng
+    File Name: db_credentials.php
+    Date of creating: Nov 17 2023
+    Description: This is the credentials.
+-->
 <?php
 
 define("DB_SERVER", "localhost");

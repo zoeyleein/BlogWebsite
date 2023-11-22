@@ -33,7 +33,7 @@ $result = mysqli_fetch_assoc($result_set);
 
 <div class="attributes">
   <dl>  
-    <dt>Topic</dt>
+    <dt>Title</dt>
     <dd><?php echo $result['title']; ?></dd>
   </dl>
   <dl>
@@ -49,9 +49,7 @@ $result = mysqli_fetch_assoc($result_set);
   <P><?php echo $result['content']; ?></P>
 
   </div>
-
+  <?php include 'footerEm.php'; ?>
 </div>
-
-<?php include 'footerEm.php'; ?>
 </body>
 </html>
