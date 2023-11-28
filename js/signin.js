@@ -1,6 +1,6 @@
 /*
-    Student: JingYi Li
-    File Name: script.js
+    Student: JingYi Li, Wei Deng
+    File Name: signin.js
     Date of creating: Nov 12 2023
     Description: This is for form validations
 */
