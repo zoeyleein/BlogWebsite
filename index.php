@@ -7,6 +7,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="blogstyle.css" />
   <title>PHP_DB</title>
 </head>
@@ -26,59 +27,76 @@ $db = db_connect();
 
 
 <?php 
-
+  
   $sql = "SELECT * FROM shortblogs ";
   $sql .= "ORDER BY id ASC";
   $result_set = mysqli_query($db,$sql);
-  
+
   ?>
 
 <div id="content">
   <div class="subjects listing">
-    <h1>Short Blogs</h1>
 
-    <div class="actions">
-      <a class="action" href="new.php">Add a post</a>
-      <label for="filtercategory">Category : </label>
-      <select name="filtercategory">
-        <option value="Food">Food</option>
-        <option value="Traveling">Traveling</option>
-        <option value="Clothing">Clothing</option>
-      </select>
-      <input type="submit" value="Submit">
+    <!-- Filter -->
+    <div class="filter">
+      <label for="categoryfilter">Filter by Category</label>
+      <ul name="categoryfilter">
+        <li><a href="filtercategory.php?category='Food'">Food</a></li>
+        <li><a href="filtercategory.php?category='Traveling'">Traveling</a></li>
+        <li><a href="filtercategory.php?category='Clothing'">Clothing</a></li>
+      </ul>
+
+      <label for="authorfilter">Filter by Author</label>
+      <ul name="authorfilter">
+        <li><a href="filterauthor.php?author='Jaya Lee'">Jaya Lee</a></li>
+        <li><a href="filterauthor.php?author='Wei Deng'">Wei Deng</a></li>
+        <li><a href="filterauthor.php?author='Anna Wu'">Anna Wu</a></li>
+      </ul>
     </div>
 
-  	<table class="list">
+  <!-- Actions -->
+  <div class="actions">
+      <a class="action add-post" href="new.php">Add a new post</a>
+
+          <!-- Search Form -->
+    <form action="search2.php" method="GET" class="search-form">
+        <label for="search" class="search-label">Search :</label>
+        <input type="text" name="search" id="search" class="search-input" placeholder="Enter keywords...">
+        <input type="submit" value="Submit" class="search-submit">
+    </form>
+  </div>
+
+  <table class="list">
   	  <tr>
-        <th style="text-align: center;">ID</th>
-        <th style="text-align: center;">Author</th>
-        <th style="text-align: center;">Title</th>
-        <th style="text-align: center;">Category</th>
-  	    <th style="text-align: center;">Content</th>
-  	    <th colspan="3" style="text-align: center;">&nbsp;</th>
+        <th >ID</th>
+        <th >Author</th>
+        <th >Title</th>
+        <th >Category</th>
+  	    <th >Content</th>
+        <th >Comment</th>
+  	    <th colspan="3">&nbsp;</th>
   	  </tr>
 
       <?php while($results = mysqli_fetch_assoc($result_set)) { ?> 
         <!-- get the data from $result_set and store it in $results -->
-        <tr>
-          <td style="width: 20px; text-align: center;"><?php echo $results['id']; ?></td>
-          <td style="width: 20px; text-align: center;"><?php echo $results['author']; ?></td>
-          <td style="width: 90px; padding: 10px;"><?php echo $results['title']; ?></td>
-          <td style="width: 100px; text-align: center;"><?php echo $results['category'] ; ?></td>
-    	    <td style="width: 400px; padding: 10px;"><?php echo $results['content']; ?></td>
-          <td colspan="3" style="text-align: center;">
-            <a class="action action-display" href="<?php echo "show.php?id=" . $results['id']; ?>">Display</a>
-            <a class="action action-edit" href="<?php echo "edit.php?id=" . $results['id']; ?>">Edit</a>
-            <a class="action action-remove" href="<?php echo "delete.php?id=" . $results['id']; ?>">Remove</a>
-          </td>
-    	  </tr>
+      <tr>
+        <td><?php echo $results['id']; ?></td>
+        <td><?php echo $results['author']; ?></td>
+        <td><?php echo $results['title']; ?></td>
+        <td><?php echo $results['category'] ; ?></td>
+    	  <td><?php echo $results['content']; ?></td>
+        <td><?php echo $results['comment']; ?></td>
+        <td colspan="3">
+          <a class="action action-display" style="width: 55px;" href="<?php echo "show.php?id=" . $results['id']; ?>">Display</a>
+          <a class="action action-edit" style="width: 55px;" href="<?php echo "edit.php?id=" . $results['id']; ?>">Edit</a>
+          <a class="action action-remove" style="width: 55px;" href="<?php echo "delete.php?id=" . $results['id']; ?>">Remove</a>
+    	</tr>
       <?php } ?>
-  	</table>
-    <br>
-    <br>
-  
+  </table>
 
   <?php include("footerEm.php"); ?>
 
+  </div>
+</div>
 </body>
 </html>

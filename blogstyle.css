@@ -2,16 +2,29 @@
 
 html {
   background-color: #FEFAEF;
+  font-family: 'Varta', sans-serif;
   height: 100%;
   width: 100%;
+  padding: auto;
 }
 
 body {
+  margin: 1%;
+  padding: 0;
+}
+
+#content {
+  width: 60%; /* Adjust the width based on your preference */
+  min-height: 500px;
+  padding: 0 20px; /* Add padding for better visual appearance */
+  margin: 0 auto; /* Center the content */
+}
+
+body.login {
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
-  font-family: 'Varta', sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,7 +38,6 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    font-family: 'Varta', sans-serif;
 }
 
 .textfield {
@@ -85,16 +97,11 @@ header {
 }
 
 header h1 {
-  margin: 0;
-  padding: 0 20px;
   font-size: 50px;
-  font-family: 'Varta', sans-serif;
   text-align: center;
 }
 
 navigation {
-  text-decoration: none;
-  width: 60%;
   font-size: 20px;
   margin: 10px auto;
   text-align: center;
@@ -140,7 +147,7 @@ navigation ul li a:hover {
 footer {
   width: 100%;
   height: 30px;
-  margin-top: 80px; /* Push the footer to the bottom */
+  margin-top: 80px; 
   padding-bottom: 30px;
   color: rgb(170, 170, 170);
   text-align: left;
@@ -149,23 +156,36 @@ footer {
 /* Actions */
 
 .actions {
-  margin-bottom: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 20px;
 }
 
-
 /* Lists */
-
 table {
+  width: 98%; /* can use min(1200px, 98%) */
   border-collapse: collapse;
   vertical-align: top;
+  padding: 1%;
 }
 
 table.list {
-  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+table.list tr:nth-of-type(2n) {
+  background: rgba(255, 255, 255, 0.603); /* Background color for odd rows */
+}
+
+table.list tr:nth-of-type(2n+1) {
+  background: rgba(255, 241, 193, 0.603); /* Background color for odd rows */
 }
 
 table.list tr td {
   border: 0.5px solid #1a1a1a;
+  text-align: center;
 }
 
 table.list tr th {
@@ -208,7 +228,6 @@ div.page.show {
 }
 
 /* Forms */
-
 dl {
   clear: both;
   overflow: hidden;
@@ -231,8 +250,43 @@ dd {
   margin: 1em 0 1em 75px;
 }
 
-/**/
+/* Filter */
+.filter {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
 
+.filter label {
+  font-weight: bold;
+}
+
+.filter ul {
+  list-style: none;
+  padding: 0;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  margin: 0;
+}
+
+.filter li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.filter a {
+  text-decoration: none;
+  color: #333;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.filter a:hover {
+  background-color: #eee;
+}
+
+/* Links */
 .actions > a {
   font-size: 15px;
   text-decoration: none;
@@ -240,25 +294,49 @@ dd {
   border: 1px solid #6f6f6f;
   border-radius: 4px;
   padding: 3px 10px;
-  margin-bottom: 20px;
+  margin: 0;
+  margin-bottom: 8px;
 }
 
+/* Search form style */
+.add-post, .search-form {
+  margin-right: 20px;
+}
+
+.search-form {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.search-label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.search-input {
+  width: 200px;
+  padding: 5px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.search-submit {
+  background-color: #c1c1c1;
+  color: white;
+  padding: 5px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-submit:hover {
+  background-color: #D33A26;
+}
 
 /* Errors */
-
-/* .errors {
-  display: inline-block;
-  border: 2px solid red;
-  color: red;
-  padding: 1em;
-  margin-bottom: 1em;
-}
-
-.errors ul {
-  margin-bottom: 0;
-  padding-left: 1em;
-} */
-
 .error-message {
   display: inline;
   color: red;
@@ -268,25 +346,82 @@ dd {
   border: 1px solid red; /* Add this line to set the border color to red for error state */
 }
 
-/* Responsive */
-
-/* Add this style for small screens */
-@media (max-width: 600px) {
-  table.list {
-    width: 100%;
+/* Responsive for middle screens */
+@media (max-width: 800px) {
+  /* header and nav */
+  header {
+    height: auto; /* Allow height to adapt to content */
+    padding-top: 15px; /* Adjust top padding */
   }
 
-  table.list tr td,
-  table.list tr th {
+  header h1 {
+    font-size: 30px; /* Adjust title font size */
+  }
+
+  #content, .filter, table {
+    width: 95%; /* Adjust the percentage as needed for smaller screens */
+  }
+
+  /* table */
+  .list th {
+    display: none;
+  }
+
+  .list td {
     display: block;
-    width: 100%;
-    box-sizing: border-box;
+    padding: 5px 10px;
   }
+
+  /* add a new post */
+  .actions > a {
+    margin-bottom: 2px;
+  }
+
+  /* Search form style */
+  .add-post, .search-form {
+    margin-right: 30px;
+    }
 }
 
-/* Add this style for phone-sized screens */
-@media (max-width: 400px) {
-  table.list tr th {
-    font-size: 14px; /* Adjust font size for better readability on smaller screens */
+/* Responsive for phone-sized screens */
+@media (max-width: 370px) {
+  /* header and nav */
+  header {
+    height: auto; /* Allow height to adapt to content */
+    padding-top: 15px; /* Adjust top padding */
+  }
+
+  header h1 {
+    font-size: 30px; /* Adjust title font size */
+  }
+
+  navigation ul li {
+    display: block; /* Stack each list item on top of each other */
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: 10px; /* Add bottom margin to avoid overlap */
+  }
+
+  #content, .filter, table {
+    width: 90%; /* Adjust the percentage as needed for even smaller screens */
+  }
+  
+  /* table */
+  .list th {
+    display: none;
+  }
+
+  .list td {
+    display: block;
+    padding: 5px 10px;
+  }
+
+  /* add a new post */
+  .actions > a {
+    margin-bottom: 2px;
+  }
+
+  /* Search form style */
+  .add-post, .search-form {
+  margin-right: 30px;
   }
 }

@@ -67,8 +67,6 @@ $result = mysqli_fetch_assoc($result_set);
       <dl>
         <dt>Content</dt>
         <dd><textarea class="input" name="content" rows="10" style="width: 350px;" required><?php echo $result['content']; ?></textarea></dd>
-
-        </dd>
       </dl>
       
       <div id="operations">
