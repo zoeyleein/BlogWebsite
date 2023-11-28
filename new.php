@@ -1,24 +1,13 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-<link rel="stylesheet" media="all" href="blogstyle.css" />
-</head>
-<body> -->
+<!-- 
+    Student: JingYi Li, Wei Deng
+    File Name: new.php
+    Date of creating: Nov 27 2023
+    Description: This is for creating a new post.
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <link rel="stylesheet" media="all" href="blogstyle.css" />
-  <style>
-    .error-message {
-      color: red;
-      font-weight: bold;
-      margin-top: 5px;
-    }
-
-    .input-error {
-      border: 1px solid red;
-    }
-  </style>
 </head>
 <body>
   

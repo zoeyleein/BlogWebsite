@@ -1,3 +1,9 @@
+<!-- 
+    Student: JingYi Li, Wei Deng
+    File Name: index.php
+    Date of creating: Nov 17 2023
+    Description: This is for displaying posts.
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,36 +36,35 @@ $result = mysqli_fetch_assoc($result_set);
     <a class="back-link"  href="index.php"> Back to List</a>
   </div>
 
-  <div class="page show">
+<div class="page show">
 
-    <h1> <?php //echo $result['author']; ?></h1>
+  <!-- the content of displaying -->
+  <div class="attributes">
+    <dl>  
+      <dt>Title</dt>
+      <dd><?php echo $result['title']; ?></dd>
+    </dl>
 
-    <div class="attributes">
-      <dl>  
-        <dt>Title</dt>
-        <dd><?php echo $result['title']; ?></dd>
-      </dl>
+    <dl>
+      <dt>Author</dt>
+      <dd><?php echo $result['author']; ?></dd>
+    </dl>
 
-      <dl>
-        <dt>Author</dt>
-        <dd><?php echo $result['author']; ?></dd>
-      </dl>
+    <dl>
+      <dt>Category</dt>
+      <dd><?php echo $result['category']; ?></dd>
+    </dl>
+  
+    <div>    
+      <P><?php echo $result['content']; ?></P>
+    </div>
 
-      <dl>
-        <dt>Category</dt>
-        <dd><?php echo $result['category']; ?></dd>
-      </dl>
-    
-      <div>    
-        <P><?php echo $result['content']; ?></P>
-      </div>
-
-      <div>  
-      <dt>Comment</dt> 
-        <P><?php echo $result['comment']; ?></P> 
-      </div>
-
+    <div>  
+    <dt>Comment</dt> 
+    <P><?php echo $result['comment']; ?></P> 
   </div>
+
+</div>
 
   <?php include 'footerEm.php'; ?>
 

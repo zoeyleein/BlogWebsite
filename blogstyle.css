@@ -1,5 +1,12 @@
+/*
+Student: JingYi Li, Wei Deng
+File Name: blogstyle.css
+Date of creating: Nov 17 2023
+Description: This is for styling all pages.
+*/
 @import url('https://fonts.googleapis.com/css2?family=Varta:wght@400;700&display=swap');
 
+/* primary structure */
 html {
   background-color: #FEFAEF;
   font-family: 'Varta', sans-serif;
@@ -14,12 +21,13 @@ body {
 }
 
 #content {
-  width: 60%; /* Adjust the width based on your preference */
+  width: 60%;
   min-height: 500px;
-  padding: 0 20px; /* Add padding for better visual appearance */
-  margin: 0 auto; /* Center the content */
+  padding: 0 20px; 
+  margin: 0 auto;
 }
 
+/* login style */
 body.login {
   height: 100%;
   width: 100%;
@@ -31,7 +39,6 @@ body.login {
   align-items: center;
 }
 
-/* login style */
 .login {
     background-color: #FEFAEF;
     display: flex;
@@ -69,21 +76,6 @@ body.login {
   background-color: #FC5B3F;
   box-shadow: none; 
   border: none; 
-}
-
-/* searching style */
-.searching {
-  margin-top: 40px;
-}
-
-.searching > input {
-  display: block;
-  width: 300px;
-  margin: 10px 0;
-  margin-bottom: 30px;
-  padding: 10px 25px;
-  border: 1px solid #ccc; 
-  border-radius: 20px;
 }
 
 /* header style */
@@ -135,14 +127,7 @@ navigation ul li a:hover {
   padding: 0 30px;
 }
 
-/* footer {
-  display: flex;
-  width: 100%; 
-  height: 30px;
-  margin: 0 auto;
-  color: black;
-  text-align: center;
-} */
+/* footer */
 
 footer {
   width: 100%;
@@ -162,7 +147,7 @@ footer {
   margin-bottom: 20px;
 }
 
-/* Lists */
+/* Table */
 table {
   width: 98%; /* can use min(1200px, 98%) */
   border-collapse: collapse;
@@ -176,11 +161,11 @@ table.list {
 }
 
 table.list tr:nth-of-type(2n) {
-  background: rgba(255, 255, 255, 0.603); /* Background color for odd rows */
+  background: rgba(255, 255, 255, 0.603); 
 }
 
 table.list tr:nth-of-type(2n+1) {
-  background: rgba(255, 241, 193, 0.603); /* Background color for odd rows */
+  background: rgba(255, 241, 193, 0.603); 
 }
 
 table.list tr td {
@@ -199,16 +184,15 @@ div.page.show {
   margin-top: 50px;
 }
 
-/* Add a class for the action links */
+/* Action */
 .action {
   display: inline-block;
   padding: 8px 16px;
   border-radius: 5px;
   text-decoration: none;
-  color: #fff; /* Text color */
+  color: #fff;
 }
 
-/* Define different background colors for different actions */
 .action-display {
   margin: 5px 5px;
   padding: 5px 5px;
@@ -298,7 +282,21 @@ dd {
   margin-bottom: 8px;
 }
 
-/* Search form style */
+/* Search */
+.searching {
+  margin-top: 40px;
+}
+
+.searching > input {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  margin-bottom: 30px;
+  padding: 10px 25px;
+  border: 1px solid #ccc; 
+  border-radius: 20px;
+}
+
 .add-post, .search-form {
   margin-right: 20px;
 }
@@ -343,23 +341,23 @@ dd {
 }
 
 .textfield.error > input {
-  border: 1px solid red; /* Add this line to set the border color to red for error state */
+  border: 1px solid red; 
 }
 
 /* Responsive for middle screens */
 @media (max-width: 800px) {
   /* header and nav */
   header {
-    height: auto; /* Allow height to adapt to content */
-    padding-top: 15px; /* Adjust top padding */
+    height: auto;
+    padding-top: 15px; 
   }
 
   header h1 {
-    font-size: 30px; /* Adjust title font size */
+    font-size: 30px; 
   }
 
   #content, .filter, table {
-    width: 95%; /* Adjust the percentage as needed for smaller screens */
+    width: 95%; 
   }
 
   /* table */
@@ -377,7 +375,7 @@ dd {
     margin-bottom: 2px;
   }
 
-  /* Search form style */
+  /* Search */
   .add-post, .search-form {
     margin-right: 30px;
     }
@@ -387,22 +385,22 @@ dd {
 @media (max-width: 370px) {
   /* header and nav */
   header {
-    height: auto; /* Allow height to adapt to content */
-    padding-top: 15px; /* Adjust top padding */
+    height: auto; 
+    padding-top: 15px;
   }
 
   header h1 {
-    font-size: 30px; /* Adjust title font size */
+    font-size: 30px; 
   }
 
   navigation ul li {
-    display: block; /* Stack each list item on top of each other */
-    margin-right: 0; /* Remove right margin */
-    margin-bottom: 10px; /* Add bottom margin to avoid overlap */
+    display: block; 
+    margin-right: 0; 
+    margin-bottom: 10px; 
   }
-
+  
   #content, .filter, table {
-    width: 90%; /* Adjust the percentage as needed for even smaller screens */
+    width: 90%; 
   }
   
   /* table */

@@ -1,3 +1,9 @@
+<!-- 
+    Student: JingYi Li, Wei Deng
+    File Name: index.php
+    Date of creating: Nov 17 2023
+    Description: This is for displaying posts.
+-->
 <?php
 require_once('db_credentials.php');
 require_once('database.php');
@@ -41,39 +47,37 @@ $result = mysqli_fetch_assoc($result_set);
   <div class="actions">
     <a class="back-link" href="index.php"> Back to List</a>
   </div>
+
   <div class="page edit">
-    <h1>Edit Blog
-    </h1>
+    <h1>Edit Blog</h1>
+
     <!-- form will post to the same page -->
     <form form action="<?php echo 'edit.php?id=' . $result['id']; ?>"  method="post">
-      <!-- <dl>
-        <dt> ID</dt>
-        <dd><input type="text" name="id" value="<?php echo $result['id']; ?>" /></dd>
-        </dd>
-      </dl> -->
-      <dl>
-        <dt>Title</dt>
-        <dd><input class="input" type="text" name="title" value="<?php echo $result['title']; ?>"  /></dd>
-      </dl>
-      <dl>
-        <dt>Author</dt>
-        <dd><input type="text" name="author" value="<?php echo $result['author']; ?>" /></dd>
-      </dl>
-      <dl>
-        <dt>Category</dt>
-        <dd><input type="text" name="category" value="<?php echo $result['category']; ?>" /></dd>
-        </dd>
-      </dl>
-      <dl>
-        <dt>Content</dt>
-        <dd><textarea class="input" name="content" rows="10" style="width: 350px;" required><?php echo $result['content']; ?></textarea></dd>
-      </dl>
-      
-      <div id="operations">
-        <input type="submit" value="Edit Blog" />
-      </div>
+    <dl>
+      <dt>Title</dt>
+      <dd><input class="input" type="text" name="title" value="<?php echo $result['title']; ?>"  /></dd>
+    </dl>
+    <dl>
+      <dt>Author</dt>
+      <dd><input type="text" name="author" value="<?php echo $result['author']; ?>" /></dd>
+    </dl>
+    <dl>
+      <dt>Category</dt>
+      <dd><input type="text" name="category" value="<?php echo $result['category']; ?>" /></dd>
+      </dd>
+    </dl>
+    <dl>
+      <dt>Content</dt>
+      <dd><textarea class="input" name="content" rows="10" style="width: 350px;" required><?php echo $result['content']; ?></textarea></dd>
+    </dl>
+    
+    <div id="operations">
+      <input type="submit" value="Edit Blog" />
+    </div>
     </form>
 
   </div>
+
   <?php include 'footerEm.php'; ?>
+
 </div>
