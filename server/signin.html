@@ -34,18 +34,16 @@
 
             <button class="button" type="submit">Login</button>
             <!-- Display error message if there's an error -->
-            <?php if (!empty($error)): ?>
-                <div class="error-message"><?php echo $error; ?></div>
-            <?php endif; ?>
 
-            <button class="button" onclick="window.location.href='/A02 Blogging website/pages/signup.html'" type="button" class="button-link">Sign up</button>
+            <button class="button" onclick="window.location.href='signup.html'" type="button" class="button-link">Sign up</button>
 
         </form>
         <script>
             function redirectToIndex() {
-                window.location.href = 'index.php';
+                window.location.href = '/A02 Blogging website/server/index.php';
             }
         </script>
+        <!-- <form action="index.php" method="post" onsubmit="return validate();"></form> -->
     </div>
     
 </body>

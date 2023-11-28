@@ -12,7 +12,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/A02 Blogging website/blogstyle.css">
     <script src="/A02 Blogging website/js/signup.js"></script>
-    <link rel="stylesheet" href="weeklykitten.css">
     <title>Blog Sign Up</title>
 </head>
 <body class="login">
@@ -20,7 +19,7 @@
         <h1 class="signPageTitle">Sign up</h1>
     </header>
     <div>
-        <form action="signup_process.php" method="post" onsubmit="return validate();">
+        <form action="/A02 Blogging website/signup_process.php" method="post" onsubmit="return validate();">
             <!-- the validate function for this form -->
 
             <div class="textfield">
@@ -44,7 +43,7 @@
             </div>
 
             <button id="signUp" class="button" type="submit">Submit</button>
-            <button class="button" onclick="window.location.href='/A02 Blogging website/pages/signin.html'" type="button" class="button-link">Sign in</button>
+            <button class="button" onclick="window.location.href='signin.html'" type="button" class="button-link">Sign in</button>
 
         </form>
     </div>
