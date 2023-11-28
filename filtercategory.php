@@ -1,8 +1,8 @@
 <!-- 
     Student: JingYi Li, Wei Deng
-    File Name: filterauthor.php
+    File Name: filtercategory.php
     Date of creating: Nov 27 2023
-    Description: This is for author filter.
+    Description: This is for category filter.
 -->
 <!DOCTYPE html>
 <html lang="en">

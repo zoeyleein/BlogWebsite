@@ -1,3 +1,9 @@
+<!-- 
+    Student: JingYi Li, Wei Deng
+    File Name: delete.php
+    Date of creating: Nov 17 2023
+    Description: This is for deleting posts.
+-->
 <?php
 
   require_once('db_credentials.php');

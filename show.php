@@ -1,6 +1,6 @@
 <!-- 
     Student: JingYi Li, Wei Deng
-    File Name: index.php
+    File Name: show.php
     Date of creating: Nov 17 2023
     Description: This is for displaying posts.
 -->

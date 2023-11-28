@@ -1,8 +1,8 @@
 <!-- 
     Student: JingYi Li, Wei Deng
-    File Name: signin.html
+    File Name: loging_process.php
     Date of creating: Nov 17 2023
-    Description: This is for checking if user input the right name and password.
+    Description: This is for loging processing.
 -->
 <?php
 // connect to the database
@@ -14,7 +14,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// 初始化錯誤信息
+// initialize error
 $error = "";
 
 // Process the form submission

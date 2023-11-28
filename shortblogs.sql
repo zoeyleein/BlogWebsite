@@ -1,3 +1,8 @@
+-- Student: JingYi Li, Wei Deng
+-- File Name: shortblogs.sql
+-- Date of creating: Nov 17 2023
+-- Description: This is the database for blogs and users.
+
 -- Database: `blog` and php web application user
 CREATE DATABASE blog;
 GRANT USAGE ON *.* TO 'appuser'@'localhost' IDENTIFIED BY 'password';

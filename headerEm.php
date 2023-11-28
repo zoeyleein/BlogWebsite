@@ -1,4 +1,9 @@
-
+<!-- 
+    Student: JingYi Li, Wei Deng
+    File Name: headerEm.php
+    Date of creating: Nov 27 2023
+    Description: This is the header.
+-->
 <!doctype html>
 
 <html lang="en">
