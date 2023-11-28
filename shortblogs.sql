@@ -7,15 +7,6 @@ FLUSH PRIVILEGES;
 USE blog;
 
 -- Table structure for table `shortblogs`
--- CREATE TABLE IF NOT EXISTS `shortblogs` (
---   `id` int(100) NOT NULL AUTO_INCREMENT,
---   `user_id` int(100) NOT NULL,
---   `author` varchar(100) NOT NULL,
---   `category` varchar(255) NOT NULL,
---   `content` varchar(1000) NOT NULL,
---   PRIMARY KEY (`id`),
---   CONSTRAINT `fk_shortblogs_user` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE CASCADE
--- ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=4;
 CREATE TABLE IF NOT EXISTS `shortblogs` (
   `id` int(100) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
@@ -40,7 +31,6 @@ CREATE TABLE IF NOT EXISTS `user` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=4;
 
--- Dumping data for table `user`
 INSERT INTO `user` (`id`, `author`, `email`, `password`) VALUES
 (1, 'Jaya Lee', 'jayalee@gmail.com', 'jayaleee'),
 (2, 'Wei Deng', 'anna@gmail.com', 'weidengg');
