@@ -22,7 +22,7 @@
     <navigation>
       <ul>
         <li><a href="<?php echo 'index.php'; ?>">Ｍain page</a></li>
-        <li><a href="/pages/signin.html">Log out</a></li>
-        <li><a href="/pages/signup.html">Sing up</a></li>
+        <li><a href="'/A02 Blogging website/pages/signin.html'">Log out</a></li>
+        <li><a href="'/A02 Blogging website/pages/signup.html'">Sing up</a></li>
       </ul>
     </navigation>
