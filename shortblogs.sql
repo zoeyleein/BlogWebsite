@@ -26,10 +26,10 @@ CREATE TABLE IF NOT EXISTS `shortblogs` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
-INSERT INTO `shortblogs` (`id`, `title`, `author`, `category`, `content`) VALUES
-(1, 'Culinary Chronicles: Tasting the World, One Bite at a Time', 'Jaya Lee', 'Food', 'Embark on a gastronomic adventure with us as we explore the diverse flavors the world has to offer. From street food delights to fine dining experiences, join our journey to savor the essence of each destination through its delectable cuisine.'),
-(2, 'Wanderlust Unleashed: A Brief Escape', 'Traveling', 'Wei Deng', 'Embark on a journey with us as we explore the hidden gems of the world. From the serene beaches to the bustling streets, our travel escapades are bound to ignite your wanderlust. Join us in discovering the beauty that lies beyond the horizon.'),
-(3, 'Fashion Forward: Embracing Style on the Go', 'Anna Wu', 'Clothing', 'Dive into the world of fashion as we curate the perfect wardrobe for your travels. From comfy yet chic airport attire to Instagram-worthy vacation looks, we have got your style covered. Let s redefine travel fashion and make every journey a runway!');
+INSERT INTO `shortblogs` (`id`, `title`, `author`, `category`, `content`, `comment`) VALUES
+(1, 'Culinary Chronicles: Tasting the World, One Bite at a Time', 'Jaya Lee', 'Food', 'Embark on a gastronomic adventure with us as we explore the diverse flavors the world has to offer. From street food delights to fine dining experiences, join our journey to savor the essence of each destination through its delectable cuisine.', 'Mouthwatering descriptions! Cannot wait to try these culinary delights.'),
+(2, 'Wanderlust Unleashed: A Brief Escape', 'Traveling', 'Wei Deng', 'Embark on a journey with us as we explore the hidden gems of the world. From the serene beaches to the bustling streets, our travel escapades are bound to ignite your wanderlust. Join us in discovering the beauty that lies beyond the horizon.', 'Your travel stories are so captivating! I feel like I am on the journey with you.'),
+(3, 'Fashion Forward: Embracing Style on the Go', 'Anna Wu', 'Clothing', 'Dive into the world of fashion as we curate the perfect wardrobe for your travels. From comfy yet chic airport attire to Instagram-worthy vacation looks, we have got your style covered. Let s redefine travel fashion and make every journey a runway!', 'Love the fashion inspiration! Traveling in style is an art you have mastered.');
 
 -- Table structure for table `user`
 CREATE TABLE IF NOT EXISTS `user` (
