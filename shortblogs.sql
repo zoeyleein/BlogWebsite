@@ -2,6 +2,7 @@
 -- File Name: shortblogs.sql
 -- Date of creating: Nov 17 2023
 -- Description: This is the database for blogs and users.
+-- Written by: JingYi Li, Wei Deng
 
 -- Database: `blog` and php web application user
 CREATE DATABASE blog;

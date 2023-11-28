@@ -3,6 +3,7 @@
     File Name: edit.php
     Date of creating: Nov 17 2023
     Description: This is for editing posts.
+    Written by: JingYi Li, Wei Deng
 -->
 <?php
 require_once('db_credentials.php');

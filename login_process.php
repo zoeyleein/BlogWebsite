@@ -3,6 +3,7 @@
     File Name: loging_process.php
     Date of creating: Nov 17 2023
     Description: This is for loging processing.
+    Written by: JingYi Li
 -->
 <?php
 // connect to the database

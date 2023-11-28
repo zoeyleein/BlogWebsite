@@ -3,6 +3,7 @@
     File Name: create.php
     Date of creating: Nov 17 2023
     Description: This is for creating a post.
+    Written by: Wei Deng
 -->
 <?php
 

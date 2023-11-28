@@ -3,6 +3,7 @@
     File Name: search2.php
     Date of creating: Nov 27 2023
     Description: This is for searching.
+    Written by: Wei Deng
 -->
 <!DOCTYPE html>
 <html lang="en">

@@ -3,6 +3,7 @@
     File Name: signup.js
     Date of creating: Nov 12 2023
     Description: This is for form validations
+    Written by: JingYi Li
 */
 function validate() {
     // Clear previous error messages

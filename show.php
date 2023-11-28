@@ -3,6 +3,7 @@
     File Name: show.php
     Date of creating: Nov 17 2023
     Description: This is for displaying posts.
+    Written by: JingYi Li, Wei Deng
 -->
 <!DOCTYPE html>
 <html lang="en">

@@ -3,6 +3,7 @@
     File Name: comment.js
     Date of creating: Nov 27 2023
     Description: This allows user to make comment
+    Written by: Wei Deng
 */
 let commentInput = document.querySelector(".comment");
 

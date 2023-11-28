@@ -3,6 +3,7 @@
     File Name: delete.php
     Date of creating: Nov 17 2023
     Description: This is for deleting posts.
+    Written by: JingYi Li, Wei Deng
 -->
 <!DOCTYPE html>
 <html lang="en">

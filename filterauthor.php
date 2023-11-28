@@ -3,6 +3,7 @@
     File Name: filterauthor.php
     Date of creating: Nov 27 2023
     Description: This is for author filter.
+    Written by: Wei Deng
 -->
 <!DOCTYPE html>
 <html lang="en">

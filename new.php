@@ -3,6 +3,7 @@
     File Name: new.php
     Date of creating: Nov 27 2023
     Description: This is for creating a new post.
+    Written by: JingYi Li, Wei Deng
 -->
 <!DOCTYPE html>
 <html lang="en">

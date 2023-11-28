@@ -3,6 +3,7 @@
     File Name: db_credentials.php
     Date of creating: Nov 17 2023
     Description: This is the credentials.
+    Written by: JingYi Li, Wei Deng
 -->
 <?php
 

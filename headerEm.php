@@ -3,6 +3,7 @@
     File Name: headerEm.php
     Date of creating: Nov 27 2023
     Description: This is the header.
+    Written by: JingYi Li, Wei Deng
 -->
 <!doctype html>
 
@@ -21,7 +22,7 @@
     <navigation>
       <ul>
         <li><a href="<?php echo 'index.php'; ?>">Ｍain page</a></li>
-        <li><a href="signin.html">Log out</a></li>
-        <li><a href="signup.html">Sing up</a></li>
+        <li><a href="/pages/signin.html">Log out</a></li>
+        <li><a href="/pages/signup.html">Sing up</a></li>
       </ul>
     </navigation>

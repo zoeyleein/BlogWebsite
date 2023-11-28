@@ -3,6 +3,7 @@
     File Name: index.php
     Date of creating: Nov 17 2023
     Description: This is for user to add/edit/delete their posts.
+    Written by: JingYi Li, Wei Deng
 -->
 <!DOCTYPE html>
 <html lang="en">
