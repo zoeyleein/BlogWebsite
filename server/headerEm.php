@@ -11,7 +11,7 @@
   <head>
     <title>Blog</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" media="all" href="<?php echo '/A02 Blogging website/blogstyle.css'; ?>" />
+    <link rel="stylesheet" media="all" href="<?php echo '/A02-organized/blogstyle.css'; ?>" />
   </head>
 
   <body>
@@ -22,7 +22,7 @@
     <navigation>
       <ul>
         <li><a href="<?php echo 'index.php'; ?>">Ｍain page</a></li>
-        <li><a href="signin.html">Log out</a></li> <!-- href="../pages/signin.html" -->
-        <li><a href="signup.html">Sign up</a></li>
+        <li><a href="/A02-organized/pages/signin.html">Log out</a></li>
+        <li><a href="/A02-organized/pages/signup.html">Sing up</a></li>
       </ul>
     </navigation>

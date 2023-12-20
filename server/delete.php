@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="stylesheet" media="all" href="blogstyle.css" />
+<link rel="stylesheet" media="all" href="/A02-organized/blogstyle.css" />
 </head>
 <body>
 <?php
@@ -60,9 +60,7 @@ $result_set = mysqli_query($db, $sql);
       </div>
     </form>
   </div>
-
   <?php include 'footerEm.php'; ?>
-
 </div>
 
 

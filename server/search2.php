@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="/A02-organized/blogstyle.css" />
 </head>
 <body>
 
@@ -21,7 +21,7 @@ $db = db_connect();
 //access URL parameter
 if(isset($_GET['search'])){
     $search = $_GET['search'];
-    $sql = "SELECT * FROM shortblogs WHERE author LIKE '%$search%' or title LIKE '%$search%' or category LIKE '%$search%' or content LIKE '%$search%'";
+    $sql = "SELECT * FROM shortblogs WHERE author LIKE '%$search%' or title LIKE '%$search%' or category LIKE '%$search%' or content LIKE '%$search%' or comment LIKE '%$search%'";
     $result_set = mysqli_query($db, $sql);
 }
 else{
@@ -30,40 +30,40 @@ else{
     $result_set = mysqli_query($db, $sql);
 }
 ?>
-    <!-- the contect of main page -->
-    <div id="content">
-        <p style="font-size: 20px; font-weight: margin-bottom: 20px; color: gray;">Result :</p>
 
-    <table class="list">
-        <tr>
-            <th >ID</th>
-            <th >Author</th>
-            <th >Title</th>
-            <th >Category</th>
-            <th >Content</th>
-            <th >Comment</th>
-            <th colspan="3">&nbsp;</th>
-        </tr>
+<div id="content">
+<p style="font-size: 20px; font-weight: margin-bottom: 20px; color: gray;">Result :</p>
 
-        <?php while($results = mysqli_fetch_assoc($result_set)) { ?> 
-            <!-- get the data from $result_set and store it in $results -->
-        <tr>
-            <td><?php echo $results['id']; ?></td>
-            <td><?php echo $results['author']; ?></td>
-            <td><?php echo $results['title']; ?></td>
-            <td><?php echo $results['category'] ; ?></td>
-            <td><?php echo $results['content']; ?></td>
-            <td><?php echo $results['comment']; ?></td>
-            <td colspan="3">
-            <a class="action action-display" style="width: 55px;" href="<?php echo "show.php?id=" . $results['id']; ?>">Display</a>
-            <a class="action action-edit" style="width: 55px;" href="<?php echo "edit.php?id=" . $results['id']; ?>">Edit</a>
-            <a class="action action-remove" style="width: 55px;" href="<?php echo "delete.php?id=" . $results['id']; ?>">Remove</a>
-            </tr>
-        <?php } ?>
-    </table>
+<table class="list">
+  	  <tr>
+        <th >ID</th>
+        <th >Author</th>
+        <th >Title</th>
+        <th >Category</th>
+  	    <th >Content</th>
+        <th >Comment</th>
+  	    <th colspan="3">&nbsp;</th>
+  	  </tr>
 
-        <?php include("footerEm.php"); ?>
+      <?php while($results = mysqli_fetch_assoc($result_set)) { ?> 
+        <!-- get the data from $result_set and store it in $results -->
+      <tr>
+        <td><?php echo $results['id']; ?></td>
+        <td><?php echo $results['author']; ?></td>
+        <td><?php echo $results['title']; ?></td>
+        <td><?php echo $results['category'] ; ?></td>
+    	  <td><?php echo $results['content']; ?></td>
+        <td><?php echo $results['comment']; ?></td>
+        <td colspan="3">
+          <a class="action action-display" style="width: 55px;" href="<?php echo "show.php?id=" . $results['id']; ?>">Display</a>
+          <a class="action action-edit" style="width: 55px;" href="<?php echo "edit.php?id=" . $results['id']; ?>">Edit</a>
+          <a class="action action-remove" style="width: 55px;" href="<?php echo "delete.php?id=" . $results['id']; ?>">Remove</a>
+    	</tr>
+      <?php } ?>
+  </table>
 
-    </div>
+  <?php include("footerEm.php"); ?>
+
+  </div>
 </body>
 </html>

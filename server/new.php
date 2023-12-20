@@ -8,7 +8,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" media="all" href="blogstyle.css" />
+  <link rel="stylesheet" media="all" href="/A02-organized/blogstyle.css" />
+  <style>
+    .error-message {
+      color: red;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+
+    .input-error {
+      border: 1px solid red;
+    }
+  </style>
 </head>
 <body>
   

@@ -9,7 +9,7 @@
 <html lang="en">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../blogstyle.css">
+  <link rel="stylesheet" href="/A02-organized/blogstyle.css" />
   <title>PHP_DB</title>
 </head>
 <body>
@@ -18,7 +18,6 @@
 <?php
 
 include ("headerEm.php");
-
 
 require_once('db_credentials.php');
 require_once('database.php');
@@ -33,7 +32,7 @@ $db = db_connect();
   $sql .= "ORDER BY id ASC";
   $result_set = mysqli_query($db,$sql);
 
-  ?>
+?>
 
 <div id="content">
   <div class="subjects listing">

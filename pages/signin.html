@@ -10,8 +10,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/A02 Blogging website/blogstyle.css">
-    <script src="/A02 Blogging website/js/signin.js"></script>
+    <link rel="stylesheet" href="/A02-organized/blogstyle.css">
     <title>Blog Sign in</title>
 </head>
 <body class="login">
@@ -21,7 +20,7 @@
 
     <!-- Sign in form -->
     <div>
-        <form action="index.php" method="post" onsubmit="return validate();">
+        <form action="/A02-organized/server/login_process.php" method="post">
             <div class="textfield">
                 <label for="authorname">User Name</label>
                 <input type="text" name="authorname" id="authorname" placeholder="User name">
@@ -29,21 +28,13 @@
 
             <div class="textfield">
                 <label for="pass">Password</label>
-                <input type="password" name="pass" id="pass" placeholder="Password">
+                <input type="password" name="password" id="password" placeholder="Password">
             </div>
 
             <button class="button" type="submit">Login</button>
-            <!-- Display error message if there's an error -->
-
             <button class="button" onclick="window.location.href='signup.html'" type="button" class="button-link">Sign up</button>
 
         </form>
-        <script>
-            function redirectToIndex() {
-                window.location.href = '/A02 Blogging website/server/index.php';
-            }
-        </script>
-        <!-- <form action="index.php" method="post" onsubmit="return validate();"></form> -->
     </div>
     
 </body>

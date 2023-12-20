@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Collect form data
     $authorname = $_POST["authorname"];
     $email = $_POST["email"];
-    $password = $_POST["pass"];  
+    $password = $_POST["pass"];
 
     // Insert data into the user table
     $sql = "INSERT INTO `user` (`author`, `email`, `password`) VALUES ('$authorname', '$email', '$password')";

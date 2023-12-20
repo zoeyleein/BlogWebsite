@@ -22,13 +22,12 @@ body {
 }
 
 #content {
-  width: 60%;
+  width: 60%; 
   min-height: 500px;
   padding: 0 20px; 
   margin: 0 auto;
 }
 
-/* login style */
 body.login {
   height: 100%;
   width: 100%;
@@ -40,6 +39,7 @@ body.login {
   align-items: center;
 }
 
+/* login style */
 .login {
     background-color: #FEFAEF;
     display: flex;
@@ -149,6 +149,7 @@ footer {
 }
 
 /* Table */
+
 table {
   width: 98%; /* can use min(1200px, 98%) */
   border-collapse: collapse;
@@ -191,25 +192,25 @@ div.page.show {
   padding: 8px 16px;
   border-radius: 5px;
   text-decoration: none;
-  color: #fff;
+  color: #fff; 
 }
 
 .action-display {
   margin: 5px 5px;
   padding: 5px 5px;
-  background-color: #4CAF50; /* Green */
+  background-color: #4CAF50; 
 }
 
 .action-edit {
   margin: 5px 5px;
   padding: 5px 5px;
-  background-color: #008CBA; /* Blue */
+  background-color: #008CBA; 
 }
 
 .action-remove {
   margin: 5px 5px;
   padding: 5px 5px;
-  background-color: #FF0000; /* Red */
+  background-color: #FF0000;
 }
 
 /* Forms */
@@ -342,15 +343,15 @@ dd {
 }
 
 .textfield.error > input {
-  border: 1px solid red; 
+  border: 1px solid red; /* Add this line to set the border color to red for error state */
 }
 
 /* Responsive for middle screens */
 @media (max-width: 800px) {
   /* header and nav */
   header {
-    height: auto;
-    padding-top: 15px; 
+    height: auto; 
+    padding-top: 15px;
   }
 
   header h1 {
@@ -376,7 +377,7 @@ dd {
     margin-bottom: 2px;
   }
 
-  /* Search */
+  /* Search form style */
   .add-post, .search-form {
     margin-right: 30px;
     }
@@ -386,8 +387,8 @@ dd {
 @media (max-width: 370px) {
   /* header and nav */
   header {
-    height: auto; 
-    padding-top: 15px;
+    height: auto;
+    padding-top: 15px; 
   }
 
   header h1 {
@@ -395,13 +396,13 @@ dd {
   }
 
   navigation ul li {
-    display: block; 
-    margin-right: 0; 
-    margin-bottom: 10px; 
+    display: block; /* Stack each list item on top of each other */
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: 10px; /* Add bottom margin to avoid overlap */
   }
-  
+
   #content, .filter, table {
-    width: 90%; 
+    width: 90%; /* Adjust the percentage as needed for even smaller screens */
   }
   
   /* table */

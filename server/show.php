@@ -9,7 +9,7 @@
 <html lang="en">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="/A02-organized/blogstyle.css" />
   <script src="comment.js" defer></script>
 </head>
 <body>
@@ -37,35 +37,36 @@ $result = mysqli_fetch_assoc($result_set);
     <a class="back-link"  href="index.php"> Back to List</a>
   </div>
 
-<div class="page show">
+  <div class="page show">
 
-  <!-- the content of displaying -->
-  <div class="attributes">
-    <dl>  
-      <dt>Title</dt>
-      <dd><?php echo $result['title']; ?></dd>
-    </dl>
+    <h1> <?php //echo $result['author']; ?></h1>
 
-    <dl>
-      <dt>Author</dt>
-      <dd><?php echo $result['author']; ?></dd>
-    </dl>
+    <div class="attributes">
+      <dl>  
+        <dt>Title</dt>
+        <dd><?php echo $result['title']; ?></dd>
+      </dl>
 
-    <dl>
-      <dt>Category</dt>
-      <dd><?php echo $result['category']; ?></dd>
-    </dl>
-  
-    <div>    
-      <P><?php echo $result['content']; ?></P>
-    </div>
+      <dl>
+        <dt>Author</dt>
+        <dd><?php echo $result['author']; ?></dd>
+      </dl>
 
-    <div>  
-    <dt>Comment</dt> 
-    <P><?php echo $result['comment']; ?></P> 
+      <dl>
+        <dt>Category</dt>
+        <dd><?php echo $result['category']; ?></dd>
+      </dl>
+    
+      <div>    
+        <P><?php echo $result['content']; ?></P>
+      </div>
+
+      <div>  
+      <dt>Comment</dt> 
+        <P><?php echo $result['comment']; ?></P> 
+      </div>
+
   </div>
-
-</div>
 
   <?php include 'footerEm.php'; ?>
 
